@@ -43,11 +43,16 @@ public class MiniGame {
                     + " in which users will have to guess the name of the person given a hint about them. "
                     + "\nFor answers guessed correctly, players will be awarded 5 points, for incorrect answers, players will be deducted 3 points."
                     + "\nNote: for the category politicians and teachers, state last names only, and for singers be sure to enter their stage name only. Good luck!\n");
-            
-            //add something so that game starts after instructions
+           
+            //delays program for 10 seconds
+            try { 
+                Thread.sleep(10000); 
+            } catch (InterruptedException e) { 
+                System.err.println(e); }         
             
         //game starts    
         case "s":
+            
             System.out.println("\nMystery Person #1");
             Beyonce.Talk();
             String guess = sc.nextLine();
