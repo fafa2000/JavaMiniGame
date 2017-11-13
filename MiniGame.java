@@ -44,7 +44,7 @@ public class MiniGame {
                     + "\nFor answers guessed correctly, players will be awarded 5 points, for incorrect answers, players will be deducted 3 points."
                     + "\nNote: for the category politicians and teachers, state last names only, and for singers be sure to enter their stage name only. Good luck!\n");
             
-            break;
+            //add something so that game starts after instructions
             
         //game starts    
         case "s":
