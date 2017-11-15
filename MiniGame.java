@@ -5,7 +5,7 @@ package minigame;
  *
  * @author Fatemeh, Catherine, Isabelle, Abinaya
  * Created:  November 7th, 2017
- * Last edited: 
+ * Last edited: November 15th, 2017
  */
 
 import java.util.Scanner;
@@ -42,7 +42,7 @@ public class MiniGame {
                     + "\nThis game consists of ten mystery people (in categories of politics, singers, and staff),"
                     + " in which users will have to guess the name of the person given a hint about them. "
                     + "\nFor answers guessed correctly, players will be awarded 5 points, for incorrect answers, players will be deducted 3 points."
-                    + "\nNote: for the category politicians and teachers, state last names only, and for singers be sure to enter their stage name only. Good luck!\n");
+                    + "\nNote: for the category politicians/teachers, state last names only, and for singers enter stage name only. \n");
            
             //delays program for 10 seconds
             try { 
@@ -52,143 +52,150 @@ public class MiniGame {
             
         //game starts    
         case "s":
-            
-            System.out.println("\nMystery Person #1");
-            Beyonce.Talk();
-            String guess = sc.nextLine();
-            System.out.println(Beyonce.PersonVerifier(guess));
-            
-            if ((Beyonce.PersonVerifier(guess))){ //can make into its own method
-                score+= 5;
-            }else{
-                score -=3;
-            }
-            
-            System.out.println("\nMystery Person #2");
-            Sheeran.Talk();
-            guess = sc.nextLine();
-            System.out.println(Sheeran.PersonVerifier(guess));
-            
-            if ((Sheeran.PersonVerifier(guess))== true){
-                score+= 5;
-            }else{
-                score -=3;
-            }
-            
-            System.out.println("\nMystery Person #3");
-            Swift.Talk();
-            guess = sc.nextLine();
-            System.out.println(Swift.PersonVerifier(guess));
-            
-            if ((Swift.PersonVerifier(guess))== true){
-                score+= 5;
-            }else{
-                score -=3;
-            }            
-            System.out.println("\nMystery Person #4");
-            Dion.Talk();
-            guess = sc.nextLine();
-            System.out.println(Dion.PersonVerifier(guess));
+            while (true){
+                System.out.println("\nMystery Person #1");
+                Beyonce.Talk();
+                String guess = sc.nextLine();
+                System.out.println(Beyonce.PersonVerifier(guess));
 
-            if ((Dion.PersonVerifier(guess))== true){
-                score+= 5;
-            }else{
-                score -=3;
-            }
-            
-            System.out.println("\nMystery Person #5");
-            Luce.Talk();
-            guess = sc.nextLine();
-            System.out.println(Luce.PersonVerifier(guess));
+                if ((Beyonce.PersonVerifier(guess))){ //can make into its own method
+                    score+= 5;
+                }else{
+                    score -=3;
+                }
 
-            if ((Luce.PersonVerifier(guess))== true){
-                score+= 5;
-            }else{
-                score -=3;
-            }
-            
-            System.out.println("\nMystery Person #6");
-            Lim.Talk();
-            guess = sc.nextLine();
-            System.out.println(Lim.PersonVerifier(guess));
+                System.out.println("\nMystery Person #2");
+                Sheeran.Talk();
+                guess = sc.nextLine();
+                System.out.println(Sheeran.PersonVerifier(guess));
 
-            if ((Lim.PersonVerifier(guess))== true){
-                score+= 5;
-            }else{
-                score -=3;
-            }
-            
-            System.out.println("\nMystery Person #7");
-            VanDyk.Talk();
-            guess = sc.nextLine();
-            System.out.println(VanDyk.PersonVerifier(guess));
-            
-            if ((VanDyk.PersonVerifier(guess))== true){
-                score+= 5;
-            }else{
-                score -=3;
-            }
-            
-            System.out.println("\nMystery Person #8");
-            Czudner.Talk();
-            guess = sc.nextLine();
-            System.out.println(Czudner.PersonVerifier(guess));
+                if ((Sheeran.PersonVerifier(guess))== true){
+                    score+= 5;
+                }else{
+                    score -=3;
+                }
 
-            if ((Czudner.PersonVerifier(guess))== true){
-                score+= 5;
-            }else{
-                score -=3;
-            }
-            
-            System.out.println("\nMystery Person #9");
-            Stalin.Talk();
-            guess = sc.nextLine();
-            System.out.println(Stalin.PersonVerifier(guess));
-            
-            if ((Stalin.PersonVerifier(guess))== true){
-                score+= 5;
-            }else{
-                score -=3;
-            }
-            
-            System.out.println("\nMystery Person #10");
-            Trump.Talk();
-            guess = sc.nextLine();
-            System.out.println(Trump.PersonVerifier(guess));
-            
-            if ((Trump.PersonVerifier(guess))== true){
-                score+= 5;
-            }else{
-                score -=3;
-            }
-            
-            System.out.println("\nMystery Person #11");
-            Trudeau.Talk();
-            guess = sc.nextLine();
-            System.out.println(Trudeau.PersonVerifier(guess));
+                System.out.println("\nMystery Person #3");
+                Swift.Talk();
+                guess = sc.nextLine();
+                System.out.println(Swift.PersonVerifier(guess));
 
-            if ((Trudeau.PersonVerifier(guess))== true){
-                score+= 5;
-            }else{
-                score -=3;
+                if ((Swift.PersonVerifier(guess))== true){
+                    score+= 5;
+                }else{
+                    score -=3;
+                }            
+                System.out.println("\nMystery Person #4");
+                Dion.Talk();
+                guess = sc.nextLine();
+                System.out.println(Dion.PersonVerifier(guess));
+
+                if ((Dion.PersonVerifier(guess))== true){
+                    score+= 5;
+                }else{
+                    score -=3;
+                }
+
+                System.out.println("\nMystery Person #5");
+                Luce.Talk();
+                guess = sc.nextLine();
+                System.out.println(Luce.PersonVerifier(guess));
+
+                if ((Luce.PersonVerifier(guess))== true){
+                    score+= 5;
+                }else{
+                    score -=3;
+                }
+
+                System.out.println("\nMystery Person #6");
+                Lim.Talk();
+                guess = sc.nextLine();
+                System.out.println(Lim.PersonVerifier(guess));
+
+                if ((Lim.PersonVerifier(guess))== true){
+                    score+= 5;
+                }else{
+                    score -=3;
+                }
+
+                System.out.println("\nMystery Person #7");
+                VanDyk.Talk();
+                guess = sc.nextLine();
+                System.out.println(VanDyk.PersonVerifier(guess));
+
+                if ((VanDyk.PersonVerifier(guess))== true){
+                    score+= 5;
+                }else{
+                    score -=3;
+                }
+
+                System.out.println("\nMystery Person #8");
+                Czudner.Talk();
+                guess = sc.nextLine();
+                System.out.println(Czudner.PersonVerifier(guess));
+
+                if ((Czudner.PersonVerifier(guess))== true){
+                    score+= 5;
+                }else{
+                    score -=3;
+                }
+
+                System.out.println("\nMystery Person #9");
+                Stalin.Talk();
+                guess = sc.nextLine();
+                System.out.println(Stalin.PersonVerifier(guess));
+
+                if ((Stalin.PersonVerifier(guess))== true){
+                    score+= 5;
+                }else{
+                    score -=3;
+                }
+
+                System.out.println("\nMystery Person #10");
+                Trump.Talk();
+                guess = sc.nextLine();
+                System.out.println(Trump.PersonVerifier(guess));
+
+                if ((Trump.PersonVerifier(guess))== true){
+                    score+= 5;
+                }else{
+                    score -=3;
+                }
+
+                System.out.println("\nMystery Person #11");
+                Trudeau.Talk();
+                guess = sc.nextLine();
+                System.out.println(Trudeau.PersonVerifier(guess));
+
+                if ((Trudeau.PersonVerifier(guess))== true){
+                    score+= 5;
+                }else{
+                    score -=3;
+                }
+
+                System.out.println("\nMystery Person #12");
+                Hitler.Talk();
+                guess = sc.nextLine();
+                System.out.println(Hitler.PersonVerifier(guess));
+
+                if ((Hitler.PersonVerifier(guess))== true){
+                    score+= 5;
+                }else{
+                    score -=3;
+                }      
+
+                //prints out score
+                System.out.println("You have achieved a score of " + score + "/60");
+                
+                System.out.println("Do you wish to play again?(y/n)");
+                String resp = sc.nextLine();
+                if (resp.equalsIgnoreCase("y")){
+                    continue;
+                }else{
+                    break;
+                }
             }
-            
-            System.out.println("\nMystery Person #12");
-            Hitler.Talk();
-            guess = sc.nextLine();
-            System.out.println(Hitler.PersonVerifier(guess));
-
-            if ((Hitler.PersonVerifier(guess))== true){
-                score+= 5;
-            }else{
-                score -=3;
-            }      
-            System.out.println(score);
-            break;
-           
-    }
-
-        
+        }
 
     }
     
